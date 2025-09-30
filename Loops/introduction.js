@@ -111,3 +111,66 @@ do {
     console.log(j);
     j++; // increment to eventually make the condition false
 }
+while (j < 5); // condition
+// Output: 0, 1, 2, 3, 4
+// The loop runs 5 times, printing the value of j each time.
+
+
+// 4. for...in loop
+/*  A for...in loop is used to iterate over the properties of an object or the
+    indexes of an array.
+    Syntax: for (variable in object/array) {
+                // code to be executed  
+            }       
+*/  
+// Example with an object:
+let person = { name: "Alice", age: 30, city: "New York" };
+for (let key in person) { // key will take the value of each property name
+    console.log(key + ": " + person[key]); // access the property value using person[key]
+}
+// Output: name: Alice, age: 30, city: New York
+// The loop iterates over each property in the person object, printing the key and its corresponding value.
+// Example with an array:           
+let colors = ["red", "green", "blue"];
+for (let index in colors) { // index will take the value of each array index    
+    console.log(index + ": " + colors[index]); // access the array element using colors[index]
+}
+// Output: 0: red, 1: green, 2: blue    
+// The loop iterates over each index in the colors array, printing the index and its corresponding value.
+// Note: for...in loops are generally used for objects. When used with arrays, they iterate over the indexes, which may not be the intended behavior if the array has non-numeric properties or methods added to it.
+// For arrays, it is often better to use a traditional for loop or a for...of loop (discussed next).
+
+// 5. for...of loop 
+/*  A for...of loop is used to iterate over the values of an iterable object, such as an array, string, or map.
+    Syntax: for (variable of iterable) {
+                // code to be executed  
+            }       
+*/
+// Example with an array:
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) { // fruit will take the value of each array element
+    console.log(fruit); // directly access the array element
+}
+// Output: apple, banana, cherry
+// The loop iterates over each element in the fruits array, printing the value of each fruit.
+// Example with a string:
+let message = "Hello";  
+for (let char of message) { // char will take the value of each character in the string
+    console.log(char); // directly access the character
+}
+// Output: H, e, l, l, o
+// The loop iterates over each character in the message string, printing each character.
+
+// Example with a map:
+let map = new Map();
+map.set("name", "Bob");
+map.set("age", 25);
+map.set("city", "Los Angeles");
+for (let [key, value] of map) { // destructuring to get key and value
+    console.log(key + ": " + value); // access the key and value directly
+}
+// Output: name: Bob, age: 25, city: Los Angeles
+// The loop iterates over each entry in the map, printing the key and its corresponding value
+
+// Note: for...of loops are ideal for iterating over arrays and other iterable objects, as they provide direct access to the values without needing to use indexes or keys.
+// However, for...of loops cannot be used directly with plain objects. For objects, use for...in loops or Object.keys()/Object.values() methods to iterate over properties or values.

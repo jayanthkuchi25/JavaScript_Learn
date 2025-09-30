@@ -1,0 +1,32 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <script src="pratice1.js"></script>
+  </head>
+  <body>
+    <h1 id="heading">Welcome page</h1>
+    <p id="greeting">Hi!</p>
+    <script>
+        document.body.children.greeting.innerText="Bye!";
+        document.body.children.heading.innerHTML="<h1><b>Welcome page</b></h1>";
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+ <html>
+  <body>
+    <h1>Just an example</h1>
+    <div id="one" class="example" onclick="stop()">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+    <script>
+        const ele=document.getElementById("two");
+        ele.innerText="Hello!";
+        function stop(){
+            alert("No, don't click me!");
+        }
+    </script>
+  </body>
+ </html>
